@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {Link} from "react-router-dom"
 const ProductionS3 = ({item}) => {
     const [activeTab, setActiveTab] = useState(1)
     const activeItem = item.find(tabs => tabs.id === activeTab)
@@ -17,7 +17,9 @@ const ProductionS3 = ({item}) => {
                     <img src={activeItem.tab_img} alt=""/>
                 </div>
                 <div className="production_s3_right">
+                    <div className="production_s3_right_title">{activeItem.title}</div>
                     {activeItem.p.map((itemP , index)=>(<p key={index}>{itemP}</p>))}
+                    <Link className={"production_s3_right_btn"} to={"#"}>Свяжитесь</Link>
                 </div>
             </div>
         </div>
