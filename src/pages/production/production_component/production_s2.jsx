@@ -42,10 +42,6 @@ const ProductionS2 = ({item}) => {
                                 <h2>{itemBottom.subtitle}</h2>
                             </div>
                         </div>
-                        <div className="s2_bottom_item_body">
-                            <p>{itemBottom.p}</p>
-                            <Link to={"#"}>Свяжитесь</Link>
-                        </div>
                     </div>
                 ))}
             </div>

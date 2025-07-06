@@ -19,7 +19,7 @@ const ProductionS3 = ({item}) => {
                 <div className="production_s3_right">
                     <div className="production_s3_right_title">{activeItem.title}</div>
                     {activeItem.p.map((itemP , index)=>(<p key={index}>{itemP}</p>))}
-                    <Link className={"production_s3_right_btn"} to={"#"}>Свяжитесь</Link>
+                    {/*<Link className={"production_s3_right_btn"} to={"#"}>Свяжитесь</Link>*/}
                 </div>
             </div>
         </div>
