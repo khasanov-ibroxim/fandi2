@@ -6,7 +6,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import {Link} from "react-router-dom"
-import {ABOUT, CONTACT, HOME, PRODUCTION} from "@/utils/constes.jsx";
+import {ABOUT, CONTACT, HOME, PRODUCTION, PRODUCTS} from "@/utils/constes.jsx";
 
 const Footer = () => {
     return (
@@ -46,7 +46,7 @@ const Footer = () => {
                                 <ul className="p-0 m-0">
                                     <li><Link to={HOME} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Главная</Link></li>
                                     <li><Link to={ABOUT} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>О нас</Link></li>
-                                    <li><Link to={PRODUCTION.replace(":id" , 1)} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Продукция</Link></li>
+                                    <li><Link to={PRODUCTS} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Продукция</Link></li>
                                     <li><Link to={CONTACT} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Контакты</Link></li>
                                 </ul>
                                 <ul className="p-0 m-0">
