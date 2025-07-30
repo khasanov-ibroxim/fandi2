@@ -14,6 +14,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Navbar = () => {
     const [submenuOpen, setSubmenuOpen] = useState(false);
+    const [langOpen, setLangOpen] = useState(false);
     const {handleLanguageChange, selectedLanguage} = useLanguage();
     const {t} = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,10 +60,10 @@ const Navbar = () => {
                         <li><Link to={CONTACT}>{t("navbar.contact")}</Link></li>
                         <li
                             className="production_link"
-                            onClick={() => setSubmenuOpen(submenuOpen === 'lang' ? null : 'lang')}
+                            onClick={() => setLangOpen(!langOpen)}
                         >
                             <span>{currentLangCode === 'ru' ? 'Русский' : 'English'}</span>
-                            <ol className={`production_submenu ${submenuOpen === 'lang' ? 'open' : ''}`}>
+                            <ol className={`production_submenu ${langOpen ? 'open' : ''}`}>
                                 {languages.map((lang) => (
                                     <li  key={lang.key}
                                          onClick={() => handleLanguageChange({ key: lang.key })}>
