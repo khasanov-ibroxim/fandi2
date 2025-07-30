@@ -11,8 +11,10 @@ import {Autoplay} from "swiper/modules";
 
 import {Link} from "react-router-dom"
 import {PRODUCTION} from "@/utils/constes.jsx";
+import {useTranslation} from "react-i18next";
 
 const HomeS3 = () => {
+    const {t} = useTranslation();
     return (
         <div className={"home_s3"}>
             <div className="home_s3_center_line"></div>
@@ -20,15 +22,11 @@ const HomeS3 = () => {
                 <div className="home_s3_box_title" data-aos="fade-right">
                     <div className="subtitle_box">
                         <span></span>
-                        <h2>Что мы делаем</h2>
+                        <h2>{t("home.home_s3.subtitle")}</h2>
                     </div>
                     <div className="home_s3_title">
-                        <h1>Полный цикл текстильного производства</h1>
-                        <p>Производим футболки, майки, туники, поло, толстовки, спортивные брюки, трусы, шорты и многое
-                            другое.
-                            Свыше 100 000 изделий в месяц, более 100 единиц современного оборудования и 1000 м²
-                            производственной площади в Ташкентской области, Республики Узбекистан.
-                        </p>
+                        <h1>{t("home.home_s3.title")}</h1>
+                        <p>{t("home.home_s3.title_bottom")}</p>
                     </div>
                 </div>
 
@@ -38,12 +36,10 @@ const HomeS3 = () => {
                             <div className="home_s3_box_content_item">
                                 <Link to={PRODUCTION.replace(":id" , 1)} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="h_s3_top">
                                     <div className="h_s3_top_left">
-                                        <h1>Закройный цех</h1>
+                                        <h1>{t("home.home_s3.item_1.h1")}</h1>
                                     </div>
                                     <div className="h_s3_top_right">
-                                        <p>На этом этапе мы подготавливаем ткань к пошиву, точно раскраивая детали
-                                            изделия по лекалам. Используем современные раскройные столы и оборудование,
-                                            что обеспечивает высокую точность и минимальный расход материала.</p>
+                                        <p>{t("home.home_s3.item_1.p")}</p>
                                         <ArrowForwardIcon/>
                                     </div>
                                 </Link>
@@ -56,13 +52,11 @@ const HomeS3 = () => {
                             <div className="home_s3_box_content_item">
                                 <Link to={PRODUCTION.replace(":id" , 2)} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="h_s3_top">
                                     <div className="h_s3_top_left">
-                                        <h1>Швейный цех</h1>
+                                        <h1>{t("home.home_s3.item_2.h1")}</h1>
 
                                     </div>
                                     <div className="h_s3_top_right">
-                                        <p>Именно здесь наши опытные швеи превращают заготовки в готовые изделия.
-                                            Благодаря более чем 100 единицам профессионального оборудования, мы
-                                            обеспечиваем стабильное качество и высокую скорость пошива.</p>
+                                        <p>{t("home.home_s3.item_2.p")}</p>
                                         <ArrowForwardIcon/>
                                     </div>
                                 </Link>
@@ -75,13 +69,11 @@ const HomeS3 = () => {
                             <div className="home_s3_box_content_item">
                                 <Link to={PRODUCTION.replace(":id" , 3)} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="h_s3_top">
                                     <div className="h_s3_top_left">
-                                        <h1>Контроль качества</h1>
+                                        <h1>{t("home.home_s3.item_3.h1")}</h1>
 
                                     </div>
                                     <div className="h_s3_top_right">
-                                        <p>Каждое изделие проходит строгую проверку на всех этапах производства — от
-                                            кроя до упаковки. Мы следим за соответствием размеров, прочностью швов и
-                                            точностью исполнения всех требований заказчика.</p>
+                                        <p>{t("home.home_s3.item_3.p")}</p>
                                         <ArrowForwardIcon/>
                                     </div>
                                 </Link>
@@ -94,13 +86,11 @@ const HomeS3 = () => {
                             <div className="home_s3_box_content_item">
                                 <Link to={PRODUCTION.replace(":id" , 4)} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="h_s3_top">
                                     <div className="h_s3_top_left">
-                                        <h1>Гладильно-упаковочный цех</h1>
+                                        <h1>{t("home.home_s3.item_4.h1")}</h1>
 
                                     </div>
                                     <div className="h_s3_top_right">
-                                        <p>Здесь изделия приводятся к финальному виду: отпариваются, гладятся и
-                                            аккуратно упаковываются. Мы обеспечиваем презентабельный внешний вид
-                                            продукции и её готовность к отгрузке.</p>
+                                        <p>{t("home.home_s3.item_4.p")}</p>
                                         <ArrowForwardIcon/>
                                     </div>
                                 </Link>

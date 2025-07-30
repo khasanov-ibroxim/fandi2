@@ -8,16 +8,18 @@ import img3 from "@/assets/home/home_s6/blog3-630x430.jpg"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {Link} from "react-router-dom"
 import {Autoplay} from "swiper/modules";
+import {useTranslation} from "react-i18next";
 
 const HomeS6 = () => {
+    const {t} = useTranslation();
     return (
         <div className={"home_s6 container-fluid"}>
             <div className="home_s6_title">
                 <div className="subtitle_box">
                     <span></span>
-                    <h2>Блог о производстве</h2>
+                    <h2>{t("home.home_s6.subtitle")}</h2>
                 </div>
-                <h1>Новости, идеи и экспертные советы</h1>
+                <h1>{t("home.home_s6.title")}</h1>
             </div>
 
 

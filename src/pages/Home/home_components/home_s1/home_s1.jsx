@@ -9,10 +9,12 @@ import {Link} from "react-router-dom"
 
 
 import bgImg from '@/assets/home/home_s1/016A3238.JPG';
+import {useTranslation} from "react-i18next";
 
 
 
 const HomeS1 = () => {
+    const {t} = useTranslation();
     return (
         <div className={"home_s1 d-flex justify-content-center align-items-center"} style={{padding:"100px 0"}}>
             <div className="row">
@@ -20,32 +22,32 @@ const HomeS1 = () => {
                     <div className="home_s1_text">
                         <div className="subtitle_box">
                             <span></span>
-                            <h2>О нас</h2>
+                            <h2>{t("home.home_s1.subtitle")}</h2>
                         </div>
-                        <h1>Полный цикл пошива под ваш бренд</h1>
-                        <p>Мы производим женскую, мужскую, детскую и корпоративную трикотажную одежду на заказ.</p>
+                        <h1>{t("home.home_s1.h1")}</h1>
+                        <p>{t("home.home_s1.p")}</p>
                         <div className="home_s1_box">
                             <div className="home_s1_box_item">
                                 <img src={mashinka_icon} alt=""/>
-                                <h3>Широкий <br/> ассортимент</h3>
+                                <h3 dangerouslySetInnerHTML={{__html:t("home.home_s1.h3_1")}}></h3>
                             </div>
                             <div className="home_s1_box_item">
                                 <img src={material_icon} alt=""/>
-                                <h3>Большие <br/> объёмы</h3>
+                                <h3 dangerouslySetInnerHTML={{__html:t("home.home_s1.h3_2")}}></h3>
                             </div>
                             <div className="home_s1_box_item">
                                 <img src={material_detal_icon} alt=""/>
-                                <h3>Современное <br/> оборудование</h3>
+                                <h3 dangerouslySetInnerHTML={{__html:t("home.home_s1.h3_3")}}></h3>
                             </div>
                             <div className="home_s1_box_item">
                                 <img src={stanok_icon} alt=""/>
-                                <h3>Собственное <br/> производство</h3>
+                                <h3 dangerouslySetInnerHTML={{__html:t("home.home_s1.h3_4")}}></h3>
                             </div>
                         </div>
                         <div className="home_s1_contact_box">
-                            <Link to={"#"} className={"home_s1_contact_box_btn"}>Контакты <ArrowForwardIcon/></Link>
+                            <Link to={"#"} className={"home_s1_contact_box_btn"}> {t("home.home_s1.link")} <ArrowForwardIcon/></Link>
                             <div className="home_s1_contact_box_item">
-                                <p>Телефон</p>
+                                <p>{t("home.home_s1.tel")}</p>
                                 <div style={{
                                     display:"flex",
                                     gap:"10px",

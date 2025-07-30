@@ -21,6 +21,7 @@ body{
     overflow: hidden;
 }
 
+
 @media screen and (max-width: 1200px){
     .main_container{
         margin: 0 !important;

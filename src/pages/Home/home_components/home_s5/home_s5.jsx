@@ -3,24 +3,25 @@ import "./home_s5.css";
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import quote from "@/assets/home/home_s5/quote.svg";
+import {useTranslation} from "react-i18next";
 
 const HomeS5 = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-
+    const {t} = useTranslation();
     const testimonialArray = [
-        `Работаем с FANDI TEKS уже второй год — всегда чётко, вовремя и без переделок. Отличное качество пошива и отзывчивый подход к каждому заказу.`,
-        `Очень довольны сотрудничеством! Быстро поняли наш стиль и требования, всё реализовано точно и аккуратно. Настоящие профессионалы.`,
-        `FANDI TEKS приятно удивили — слаженный процесс от разработки модели до упаковки. Всегда на связи, всегда с решением.`,
-        `Понравилось внимание к деталям. Даже сложные технические задания были выполнены качественно. Планируем продолжать сотрудничество.`,
-        `Отличный производственный партнёр: гибкий, надёжный и современный. Всё, что нужно бренду, который ценит стабильность.`,
-        `Были приятно удивлены качеством. Материалы, пошив и контроль соответствуют высоким стандартам — рекомендуем!`
+        t('home.home_s5.i1'),
+        t('home.home_s5.i2'),
+        t('home.home_s5.i3'),
+        t('home.home_s5.i4'),
+        t('home.home_s5.i5'),
+        t('home.home_s5.i6'),
     ]
 
 
     return (
         <div className="home_s5">
             <div className="home_s5_title">
-                Отзывы
+                {t("home.home_s5.title")}
             </div>
             <Swiper
                 slidesPerView={"auto"}

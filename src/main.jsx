@@ -9,9 +9,13 @@ import 'swiper/css/pagination';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+import {LanguageProvider} from "@/utils/lang/LangContext.jsx";
+
 import {BrowserRouter} from "react-router-dom";
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <App />
+      <LanguageProvider>
+          <App />
+      </LanguageProvider>
   </BrowserRouter>,
 )

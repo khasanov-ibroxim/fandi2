@@ -127,14 +127,14 @@ nav {
     padding:10px 0;
 }
 
-.production_submenu li a {
+.production_submenu li a , .production_submenu li span {
     color: black !important;
     text-decoration: none;
     display: block;
     transition: color 0.3s ease;
 }
 
-.production_submenu li:hover a {
+.production_submenu li:hover a , .production_submenu li:hover span  {
     color: #c3002f !important;
 }
 

@@ -2,28 +2,30 @@ import React from 'react';
 import "./home_s2.css"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {Link} from "react-router-dom"
+import {useTranslation} from "react-i18next";
 const HomeS2 = () => {
+    const {t} = useTranslation();
     return (
         <div className={"home_s2"} data-aos="fade-up">
             <div className="container-fluid">
                 <div className="subtitle_box justify-content-center">
                     <span></span>
-                    <h2 style={{color: "white"}}>Преимущества</h2>
+                    <h2 style={{color: "white"}}>{t('home.home_s2.subtitle')}</h2>
                 </div>
                 <div className="home_s2_title text-center ">
-                    <h1>Наши ключевые преимущества — <br/>качество, гибкость и надёжность</h1>
+                    <h1 dangerouslySetInnerHTML={{__html:t('home.home_s2.title')}}></h1>
                 </div>
                 <div className="home_s2_content">
                     <div className="home_s2_item">
                         <div className="home_s2_opacity"></div>
                         <div className="home_s2_item_left">
-                            <span>Fandi teks</span>
-                            <Link to={"#"}>Быстрая обработка</Link>
+                            <span>{t('home.home_s2.item_top')}</span>
+                            <Link to={"#"}>{t('home.home_s2.item_1.left')}</Link>
 
 
                         </div>
                         <div className="home_s2_item_right">
-                            <p>Оперативно предоставляем всю необходимую информацию и поддерживаем обратную связь на каждом этапе.</p>
+                            <p>{t('home.home_s2.item_1.right')}</p>
                             <div className="home_s2_item_right_icon"><ArrowForwardIcon fontSize={'large'}/></div>
                         </div>
                     </div>
@@ -32,39 +34,41 @@ const HomeS2 = () => {
                     <div className="home_s2_item">
                         <div className="home_s2_opacity"></div>
                         <div className="home_s2_item_left">
-                            <span>Fandi teks</span>
-                            <Link to={"#"}>Полный цикл</Link>
+                            <span>{t('home.home_s2.item_top')}</span>
+                            <Link to={"#"}>{t('home.home_s2.item_2.left')}</Link>
 
 
                         </div>
                         <div className="home_s2_item_right">
-                            <p>Выполняем разработку конструкции, изготовление лекал, образцов и пошив полного размерного ряда.</p>
+                            <p>{t('home.home_s2.item_2.right')}</p>
                             <div className="home_s2_item_right_icon"><ArrowForwardIcon fontSize={'large'}/></div>
                         </div>
                     </div>
+
                     <div className="home_s2_item">
                         <div className="home_s2_opacity"></div>
                         <div className="home_s2_item_left">
-                            <span>Fandi teks</span>
-                            <Link to={"#"}>Качество гарантировано</Link>
+                            <span>{t('home.home_s2.item_top')}</span>
+                            <Link to={"#"}>{t('home.home_s2.item_3.left')}</Link>
 
 
                         </div>
                         <div className="home_s2_item_right">
-                            <p>Обеспечиваем поэтапный контроль, соответствие дизайну, фасону, размерам и маркировке.</p>
+                            <p>{t('home.home_s2.item_3.right')}</p>
                             <div className="home_s2_item_right_icon"><ArrowForwardIcon fontSize={'large'}/></div>
                         </div>
                     </div>
+
                     <div className="home_s2_item">
                         <div className="home_s2_opacity"></div>
                         <div className="home_s2_item_left">
-                            <span>Fandi teks</span>
-                            <Link to={"#"}>Цвет и объём</Link>
+                            <span>{t('home.home_s2.item_top')}</span>
+                            <Link to={"#"}>{t('home.home_s2.item_4.left')}</Link>
 
 
                         </div>
                         <div className="home_s2_item_right">
-                            <p>Красим полотно по вашему цвету и Pantone, минимальный заказ — 750 единиц на модель и цвет.</p>
+                            <p>{t('home.home_s2.item_4.right')}</p>
                             <div className="home_s2_item_right_icon"><ArrowForwardIcon fontSize={'large'}/></div>
                         </div>
                     </div>
