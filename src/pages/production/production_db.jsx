@@ -31,72 +31,74 @@ import p_4_3 from "@/assets/production/product_db/4/0B0A4832.JPG"
 import p_4_4 from "@/assets/production/product_db/4/0B0A4617.JPG"
 
 
-export const Production_db = [
+export const Production_db = (t) => [
     {
         id: 1,
-        title_name: "Закройный цех",
+        title_name: t("production.item_1.title_name"),
         top_right: {
             top_img: p_1_top,
             top_img_style: {background: `url(${p_1_top}) bottom no-repeat`, backgroundSize: "contain"},
-            subtitle: "FANDI TEKS",
-            title: "Точность начинается с кроя",
-            p: "Наш закройный цех оснащён современным оборудованием, обеспечивающим высокую точность и скорость обработки материалов. Все лекала разрабатываются с учётом требований заказчика и особенностей ткани. Благодаря строгому контролю на этапе раскроя мы достигаем идеальной посадки готовых изделий.",
-            list_title: "Крой без ошибок",
-            list: ["Применяем автоматизированные системы раскроя и цифровые лекала. ", "Оптимизируем расход ткани для снижения себестоимости. ", "Гарантируем точность размеров и соответствие техническим требованиям. "]
-        },
-        top_bottom: [
-            {
-                icon: icon1,
-                title: "Идеальный крой",
-                subtitle: "Точность",
-                p: "Обеспечивают максимальную точность при массовом производстве."
-            },
-            {
-                icon: icon2,
-                title: "Цифровой раскрой",
-                subtitle: "Скорость",
-                p: "Снижает вероятность ошибок и ускоряет подготовительный этап."
-            },
-            {
-                icon: icon3,
-                title: "Контроль качества",
-                subtitle: "Надёжность",
-                p: "Каждая деталь проверяется перед отправкой в пошив."
+            subtitle: t("production.item_1.top_right.subtitle"),
+            title: t("production.item_1.top_right.title"),
+            p: t("production.item_1.top_right.p"),
+            list_title: t("production.item_1.top_right.list_title"),
+            list: {
+                i1: t("production.item_1.top_right.list.i1"),
+                i2: t("production.item_1.top_right.list.i2"),
+                i3: t("production.item_1.top_right.list.i3")
             }
-        ],
-        tabs: [
-            {
+        },
+        top_bottom: {
+            i1: {
+                icon: icon1,
+                title: t("production.item_1.top_bottom.i1.title"),
+                subtitle: t("production.item_1.top_bottom.i1.subtitle"),
+                p: t("production.item_1.top_bottom.i1.p")
+            },
+            i2: {
+                icon: icon2,
+                title: t("production.item_1.top_bottom.i2.title"),
+                subtitle: t("production.item_1.top_bottom.i2.subtitle"),
+                p: t("production.item_1.top_bottom.i2.p")
+            },
+            i3: {
+                icon: icon3,
+                title: t("production.item_1.top_bottom.i3.title"),
+                subtitle: t("production.item_1.top_bottom.i3.subtitle"),
+                p: t("production.item_1.top_bottom.i3.p")
+            }
+        },
+        tabs: {
+            i1: {
                 id: 1,
-                title: "Технологичный подход",
+                title: t("production.item_1.tabs.i1.title"),
                 tab_img: p_1_1,
-                p: ["Мы используем современное оборудование и цифровые технологии на всех этапах производства. Это позволяет нам обеспечить стабильное качество и высокую скорость выполнения заказов.",
-                    "Благодаря автоматизации процессов мы сокращаем количество ошибок и минимизируем потери материала. Такой подход делает наш цех максимально эффективным и гибким."
-                ]
+                p: t("production.item_1.tabs.i1.p")
             },
-            {
+            i2: {
                 id: 2,
-                title: "Качество лекал",
+                title: t("production.item_1.tabs.i2.title"),
                 tab_img: p_1_2,
-                p: ["Каждое лекало разрабатывается индивидуально с учётом модели, ткани и особенностей посадки. Мы уделяем внимание каждой детали, чтобы добиться идеального результата. Перед запуском в производство все лекала проходят проверку и корректировку. Это гарантирует точное соответствие изделия требованиям заказчика."]
+                p: t("production.item_1.tabs.i2.p")
             },
-            {
+            i3: {
                 id: 3,
-                title: "Оптимальный расход",
+                title: t("production.item_1.tabs.i3.title"),
                 tab_img: p_1_3,
-                p: ["Мы стремимся к максимально экономному использованию ткани без ущерба для качества. Наши специалисты тщательно рассчитывают раскладку материалов на этапе подготовки. Такая работа позволяет снижать себестоимость и повышать эффективность всего производственного цикла. Заказчик получает качественный продукт при оптимальных затратах."]
+                p: t("production.item_1.tabs.i3.p")
             },
-            {
+            i4: {
                 id: 4,
-                title: "Чёткий контроль",
+                title: t("production.item_1.tabs.i4.title"),
                 tab_img: p_1_4,
-                p: ["Контроль начинается с первых этапов — от проверки ткани до сверки размеров и линий кроя. Это позволяет исключить брак и добиться высокого стандарта изделий. Каждая партия проходит финальный осмотр перед запуском в пошив. Мы уверены в результате, потому что контролируем процесс на каждом шаге."]
+                p: t("production.item_1.tabs.i4.p")
 
             }
-        ]
+        }
     },
     {
         id: 2,
-        title_name: "Швейный цех",
+        title_name: t("production.item_2.title_name"),
         top_right: {
             top_img: p_2_top,
             top_img_style: {
@@ -104,126 +106,128 @@ export const Production_db = [
                 backgroundSize: "contain",
             },
             subtitle: "FANDI TEKS",
-            title: "Надёжный пошив",
-            p: "Наш швейный цех — это сочетание современных технологий и мастерства опытных специалистов. Каждый этап пошива проходит контроль качества для достижения идеального результата. Мы обеспечиваем стабильность, аккуратность и высокую скорость выполнения заказов.",
-            list_title: "Профессионализм в деталях",
-            list: ["Используем промышленное оборудование для разных типов тканей.", "Работаем с любыми объёмами — от малых серий до крупного производства.", "Контролируем качество каждого изделия перед упаковкой."]
+            title: t("production.item_2.top_right.title"),
+            p: t("production.item_2.top_right.p"),
+            list_title: t("production.item_2.top_right.list_title"),
+            list: {
+                i1: t("production.item_2.top_right.list.i1"),
+                i2: t("production.item_2.top_right.list.i2"),
+                i3: t("production.item_2.top_right.list.i3")
+            }
         },
-        top_bottom: [
-            {
+        top_bottom: {
+            i1: {
                 icon: icon1,
-                title: "Чистый пошив",
-                subtitle: "Точность",
-                p: "Каждое изделие проходит тщательную обработку, включая внутренние швы и отделку"
+                title: t("production.item_2.top_bottom.i1.title"),
+                subtitle: t("production.item_2.top_bottom.i1.subtitle"),
+                p: t("production.item_2.top_bottom.i1.p")
             },
-            {
+            i2: {
                 icon: icon2,
-                title: "Надёжные материалы ",
-                subtitle: "Качество ",
-                p: "Используем качественные нитки, фурнитуру и расходники, подходящие к типу ткани"
+                title: t("production.item_2.top_bottom.i2.title"),
+                subtitle: t("production.item_2.top_bottom.i2.subtitle"),
+                p: t("production.item_2.top_bottom.i2.p")
             },
-            {
+            i3: {
                 icon: icon3,
-                title: "Сильная команда",
-                subtitle: "Ответственный подход ",
-                p: "Каждое изделие контролируется вручную на финальном этапе перед упаковкой"
+                title: t("production.item_2.top_bottom.i3.title"),
+                subtitle: t("production.item_2.top_bottom.i3.subtitle"),
+                p: t("production.item_2.top_bottom.i3.p")
             }
-        ],
-        tabs: [
-            {
+        },
+        tabs: {
+            i1: {
                 id: 1,
-                title: "Современное оборудование",
+                title: t("production.item_2.tabs.i1.title"),
                 tab_img: p_2_1,
-                p: ["Наш швейный цех оснащён промышленными машинами последнего поколения. Это обеспечивает высокую скорость пошива и безупречное качество строчек.",
-                    "Оборудование подходит для работы с различными типами тканей и фурнитуры. Мы легко адаптируемся под любые модели и требования заказчика."
-                ]
+                p: t("production.item_2.tabs.i1.p")
             },
-            {
+            i2: {
                 id: 2,
-                title: "Опытные мастера",
+                title: t("production.item_2.tabs.i2.title"),
                 tab_img: p_2_2,
-                p: ["Весь процесс пошива выполняется профессиональной командой с многолетним стажем. Каждый шов — результат точной и выверенной работы. Наши мастера умеют работать как с массовыми заказами, так и с индивидуальными, сложными изделиями. Мы гарантируем стабильное качество вне зависимости от объёмов."]
+                p: t("production.item_2.tabs.i2.p")
             },
-            {
+            i3: {
                 id: 3,
-                title: "Контроль сборки",
+                title: t("production.item_2.tabs.i3.title"),
                 tab_img: p_2_3,
-                p: ["На всех этапах пошива проводится промежуточный контроль изделий. Это помогает сразу выявлять и устранять малейшие отклонения от стандарта. Благодаря этому подходу мы избегаем переделок и добиваемся идеального внешнего вида продукции. Конечный результат всегда соответствует ожиданиям клиента."]
+                p: t("production.item_2.tabs.i3.p")
             },
-            {
+            i4: {
                 id: 4,
-                title: "Чистая отделка",
+                title: t("production.item_2.tabs.i4.title"),
                 tab_img: p_2_4,
-                p: ["Особое внимание уделяется аккуратной отделке швов, кантов и декоративных элементов. Мы следим за тем, чтобы изделие выглядело профессионально как снаружи, так и внутри. Каждая единица продукции проходит финальную обработку и проверку перед упаковкой. Это делает нашу одежду не только красивой, но и долговечной в носке."]
-
-            }
-        ]
+                p: t("production.item_2.tabs.i4.p")
+            },
+        }
     },
     {
         id: 3,
-        title_name: "Контроль качества",
+        title_name: t("production.item_3.title_name"),
         top_right: {
             top_img: p_3_top,
             top_img_style: {background: `url(${p_3_top}) bottom no-repeat`, backgroundSize: "contain"},
             subtitle: "FANDI TEKS",
-            title: "Надёжный результат",
-            p: "Мы строго контролируем качество на всех этапах производства — от кроя до упаковки. Каждое изделие проходит ручную и техническую проверку на соответствие стандартам. Такой подход позволяет нам гарантировать стабильный результат и высокое доверие заказчиков.",
-            list_title: "Каждый шаг важен",
-            list: [" Проверка изделий на каждом этапе швейного процесса.", "Оценка точности размеров, качества швов и отделки.", "Финальный осмотр перед упаковкой и отправкой."]
+            title: t("production.item_3.top_right.title"),
+            p: t("production.item_3.top_right.p"),
+            list_title: t("production.item_3.top_right.list_title"),
+            list:  {
+                i1: t("production.item_3.top_right.list.i1"),
+                i2: t("production.item_3.top_right.list.i2"),
+                i3: t("production.item_3.top_right.list.i3")
+            }
         },
-        top_bottom: [
-            {
+        top_bottom: {
+            i1: {
                 icon: icon1,
-                title: "Чёткий контроль",
-                subtitle: "Надёжность",
-                p: "Контроль осуществляется на каждом этапе — от кроя до финальной отделки."
+                title: t("production.item_3.top_bottom.i1.title"),
+                subtitle: t("production.item_3.top_bottom.i1.subtitle"),
+                p: t("production.item_3.top_bottom.i1.p")
             },
-            {
+            i2: {
                 icon: icon2,
-                title: "Надёжная проверка",
-                subtitle: "Точность",
-                p: "Проверяем соответствие размеров, посадки и симметрии изделия."
+                title: t("production.item_3.top_bottom.i2.title"),
+                subtitle: t("production.item_3.top_bottom.i2.subtitle"),
+                p: t("production.item_3.top_bottom.i2.p")
             },
-            {
+            i3: {
                 icon: icon3,
-                title: "Гарантия результата",
-                subtitle: "Уверенность",
-                p: "Перед упаковкой изделие проходит ручной осмотр на наличие дефектов."
-            }
-        ],
-        tabs: [
-            {
+                title: t("production.item_3.top_bottom.i3.title"),
+                subtitle: t("production.item_3.top_bottom.i3.subtitle"),
+                p: t("production.item_3.top_bottom.i3.p")
+            },
+        },
+        tabs: {
+            i1: {
                 id: 1,
-                title: "Многоступенчатый контроль",
+                title: t("production.item_3.tabs.i1.title"),
                 tab_img: p_3_1,
-                p: ["На каждом этапе производства проводится тщательная проверка изделий. Мы контролируем качество кроя, пошива, отделки и упаковки.",
-                    "Это позволяет выявлять возможные дефекты ещё до перехода к следующему этапу. Благодаря такому подходу мы обеспечиваем стабильное качество всей продукции."
-                ]
+                p: t("production.item_3.tabs.i1.p")
             },
-            {
+            i2: {
                 id: 2,
-                title: "Точные измерения",
+                title: t("production.item_3.tabs.i2.title"),
                 tab_img: p_3_2,
-                p: ["Каждое изделие проверяется на соответствие размерам, лекалам и посадке. Мы используем измерительные шаблоны и точные инструменты. Контроль параметров помогает избежать ошибок при массовом пошиве. Это особенно важно для корпоративных и серийных заказов."]
+                p: t("production.item_3.tabs.i2.p")
             },
-            {
+            i3: {
                 id: 3,
-                title: "Финальная проверка",
+                title: t("production.item_3.tabs.i3.title"),
                 tab_img: p_3_3,
-                p: ["Перед упаковкой каждое изделие проходит ручной осмотр. Наши специалисты проверяют швы, строчки, фурнитуру и чистоту изделия. Это последний рубеж качества перед отправкой клиенту. Мы гарантируем, что заказчик получает только полностью готовую и проверенную продукцию."]
+                p: t("production.item_3.tabs.i3.p")
             },
-            {
+            i4: {
                 id: 4,
-                title: "Стандарты качества",
+                title: t("production.item_3.tabs.i4.title"),
                 tab_img: p_3_4,
-                p: ["Мы придерживаемся высоких стандартов внутреннего контроля. Все изделия соответствуют техническим условиям и ожиданиям заказчика. Каждый сотрудник вовлечён в процесс обеспечения качества. Это наша философия и залог доверия со стороны партнёров."]
-
-            }
-        ]
+                p: t("production.item_3.tabs.i4.p")
+            },
+        }
     },
     {
         id: 4,
-        title_name: "Гладильно-упаковочный цех",
+        title_name: t("production.item_4.title_name"),
         top_right: {
             top_img: p_4_top,
             top_img_style: {
@@ -232,59 +236,60 @@ export const Production_db = [
 
             },
             subtitle: "FANDI TEKS",
-            title: "Финиш",
-            p: "Гладильно-упаковочный цех — заключительный, но не менее важный этап производства. Здесь изделия приобретают товарный вид: их отпаривают, выравнивают и аккуратно упаковывают. Мы придаём особое значение чистоте, аккуратности и презентабельности каждой вещи.",
-            list_title: "Идеальная подача",
-            list: [" Используем профессиональное оборудование для отпаривания и глажки.", "Каждое изделие тщательно проверяется перед упаковкой.", "Продукция упаковывается в соответствии с требованиями клиента."]
+            title: t("production.item_4.top_right.title"),
+            p: t("production.item_4.top_right.p"),
+            list_title: t("production.item_4.top_right.list_title"),
+            list: {
+                i1: t("production.item_4.top_right.list.i1"),
+                i2: t("production.item_4.top_right.list.i2"),
+                i3: t("production.item_4.top_right.list.i3")
+            }
         },
-        top_bottom: [
-            {
+        top_bottom: {
+            i1: {
                 icon: icon1,
-                title: "Финальный штрих",
-                subtitle: "Безупречная глажка",
-                p: " Отпаривание проводится с учётом типа ткани и кроя, чтобы сохранить форму изделия."
+                title: t("production.item_4.top_bottom.i1.title"),
+                subtitle: t("production.item_4.top_bottom.i1.subtitle"),
+                p: t("production.item_4.top_bottom.i1.p")
             },
-            {
+            i2: {
                 icon: icon2,
-                title: "Точная укладка",
-                subtitle: "Аккуратная упаковка",
-                p: "Каждое изделие складывается вручную и помещается в индивидуальную упаковку."
+                title: t("production.item_4.top_bottom.i2.title"),
+                subtitle: t("production.item_4.top_bottom.i2.subtitle"),
+                p: t("production.item_4.top_bottom.i2.p")
             },
-            {
+            i3: {
                 icon: icon3,
-                title: "Готовый товар",
-                subtitle: "Готовность к отправке",
-                p: "Упакованная продукция сортируется и подготавливается к отгрузке."
-            }
-        ],
-        tabs: [
-            {
+                title: t("production.item_4.top_bottom.i3.title"),
+                subtitle: t("production.item_4.top_bottom.i3.subtitle"),
+                p: t("production.item_4.top_bottom.i3.p")
+            },
+        },
+        tabs: {
+            i1: {
                 id: 1,
-                title: "Профессиональная глажка",
+                title: t("production.item_4.tabs.i1.title"),
                 tab_img: p_4_1,
-                p: ["Изделия проходят бережную обработку на промышленном отпаривательном и гладильном оборудовании. Мы учитываем особенности кроя и тип ткани, чтобы сохранить форму и структуру изделия.",
-                    "Каждое изделие проверяется после глажки на наличие складок и дефектов. В результате одежда выглядит аккуратно, опрятно и полностью готова к продаже или отгрузке."
-                ]
+                p: t("production.item_4.tabs.i1.p")
             },
-            {
+            i2: {
                 id: 2,
-                title: "Чистая упаковка",
+                title: t("production.item_4.tabs.i2.title"),
                 tab_img: p_4_2,
-                p: ["Все изделия перед упаковкой проходят финальную проверку на чистоту и внешний вид. Мы обеспечиваем стерильность и аккуратность обработки на этом этапе. Используем индивидуальные пакеты, коробки или вешалки по запросу заказчика. Такой подход сохраняет товарный вид продукции до момента доставки."]
+                p: t("production.item_4.tabs.i2.p")
             },
-            {
+            i3: {
                 id: 3,
-                title: "Удобная сортировка",
+                title: t("production.item_4.tabs.i3.title"),
                 tab_img: p_4_3,
-                p: ["После упаковки изделия сортируются по размерам, моделям или артикулам. Это упрощает дальнейшую логистику и работу с заказами. Каждая партия сопровождается маркировкой и документацией. Благодаря этому мы обеспечиваем точность поставок и удобство для клиента."]
+                p: t("production.item_4.tabs.i3.p")
             },
-            {
+            i4: {
                 id: 4,
-                title: "Готовность к отгрузке",
+                title: t("production.item_4.tabs.i4.title"),
                 tab_img: p_4_4,
-                p: ["На заключительном этапе продукция комплектуется по заказам и готовится к отгрузке. Мы соблюдаем все условия хранения и упаковки. Вся продукция аккуратно упакована, защищена и готова к транспортировке. Это позволяет заказчику получить изделие в идеальном виде."]
-
-            }
-        ]
+                p: t("production.item_4.tabs.i4.p")
+            },
+        }
     },
 ]

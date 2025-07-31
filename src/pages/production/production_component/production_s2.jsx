@@ -21,29 +21,55 @@ const ProductionS2 = ({item}) => {
                             <p>{item.top_right.p}</p>
                             <h3>{item.top_right.list_title}</h3>
                             <ul>
-                                {item.top_right.list.map((itemList , index)=>(
-                                    <li key={index}><CheckCircleIcon/>{itemList}</li>
-                                ))}
+                                <li ><CheckCircleIcon/>{item.top_right.list.i1}</li>
+                                <li ><CheckCircleIcon/>{item.top_right.list.i2}</li>
+                                <li ><CheckCircleIcon/>{item.top_right.list.i3}</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="s2_bottom">
-                {item.top_bottom.map((itemBottom, index)=>(
-                    <div key={index} className="s2_bottom_item">
-                        <div className="s2_bottom_item_top">
-                            <div className="s2_bottom_item_top_element">
-                                <div className="s2_bottom_item_top_line"></div>
-                                <img src={itemBottom.icon} alt="Fablio"/>
-                            </div>
-                            <div className="s2_bottom_item_top_text">
-                                <h1>{itemBottom.title}</h1>
-                                <h2>{itemBottom.subtitle}</h2>
-                            </div>
+
+
+                <div className="s2_bottom_item">
+                    <div className="s2_bottom_item_top">
+                        <div className="s2_bottom_item_top_element">
+                            <div className="s2_bottom_item_top_line"></div>
+                            <img src={item.top_bottom.i1.icon} alt="Fablio"/>
+                        </div>
+                        <div className="s2_bottom_item_top_text">
+                            <h1>{item.top_bottom.i1.title}</h1>
+                            <h2>{item.top_bottom.i1.subtitle}</h2>
                         </div>
                     </div>
-                ))}
+                </div>
+                <div className="s2_bottom_item">
+                    <div className="s2_bottom_item_top">
+                        <div className="s2_bottom_item_top_element">
+                            <div className="s2_bottom_item_top_line"></div>
+                            <img src={item.top_bottom.i2.icon} alt="Fablio"/>
+                        </div>
+                        <div className="s2_bottom_item_top_text">
+                            <h1>{item.top_bottom.i2.title}</h1>
+                            <h2>{item.top_bottom.i2.subtitle}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="s2_bottom_item">
+                    <div className="s2_bottom_item_top">
+                        <div className="s2_bottom_item_top_element">
+                            <div className="s2_bottom_item_top_line"></div>
+                            <img src={item.top_bottom.i3.icon} alt="Fablio"/>
+                        </div>
+                        <div className="s2_bottom_item_top_text">
+                            <h1>{item.top_bottom.i3.title}</h1>
+                            <h2>{item.top_bottom.i3.subtitle}</h2>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     );

@@ -37,7 +37,7 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
     return (
-        <nav className={"main_container"} style={{overflow:"inherit"}}>
+        <nav className={"main_container"} style={{overflow: "inherit"}}>
             <div className="navbar">
                 <div className="nav_logo">
                     <img src={logo} alt="logo"/>
@@ -49,29 +49,32 @@ const Navbar = () => {
                         <li className="production_link" onClick={() => setSubmenuOpen(!submenuOpen)}>
                             <span>{t("navbar.production")}</span>
                             <ol className={`production_submenu ${submenuOpen ? 'open' : ''}`}>
-                                <li><Link to={PRODUCTION.replace(":id", 1)}>{t("navbar.production_list.zakroy")}</Link></li>
-                                <li><Link to={PRODUCTION.replace(":id", 2)}>{t("navbar.production_list.shvey")}</Link></li>
-                                <li><Link to={PRODUCTION.replace(":id", 3)}>{t("navbar.production_list.kantrol")}</Link></li>
-                                <li><Link to={PRODUCTION.replace(":id", 4)}>{t("navbar.production_list.gladil")}</Link></li>
+                                <li><Link to={PRODUCTION.replace(":id", 1)}>{t("navbar.production_list.zakroy")}</Link>
+                                </li>
+                                <li><Link to={PRODUCTION.replace(":id", 2)}>{t("navbar.production_list.shvey")}</Link>
+                                </li>
+                                <li><Link to={PRODUCTION.replace(":id", 3)}>{t("navbar.production_list.kantrol")}</Link>
+                                </li>
+                                <li><Link to={PRODUCTION.replace(":id", 4)}>{t("navbar.production_list.gladil")}</Link>
+                                </li>
                             </ol>
                         </li>
 
                         <li><Link to={PRODUCTS}>{t("navbar.products")}</Link></li>
                         <li><Link to={CONTACT}>{t("navbar.contact")}</Link></li>
-                        <li
-                            className="production_link"
-                            onClick={() => setLangOpen(!langOpen)}
-                        >
-                            <span>{currentLangCode === 'ru' ? 'Русский' : 'English'}</span>
-                            <ol className={`production_submenu ${langOpen ? 'open' : ''}`}>
-                                {languages.map((lang) => (
-                                    <li  key={lang.key}
-                                         onClick={() => handleLanguageChange({ key: lang.key })}>
-                                        <span>{lang.label}</span>
-                                    </li>
-                                ))}
-                            </ol>
+                        <li onClick={() => {
+                                const nextLang = currentLangCode === "ru"
+                                    ? languages.find(lang => lang.code === "en")
+                                    : languages.find(lang => lang.code === "ru");
+                                handleLanguageChange(nextLang);
+                            }} style={{cursor: "pointer"}}>
+                            {selectedLanguage ? (
+                                <span><img src={selectedLanguage.icon} alt="" width={25} height={25}/></span>
+                            ) : (
+                                <span></span>
+                            )}
                         </li>
+
 
                     </ul>
                 </div>

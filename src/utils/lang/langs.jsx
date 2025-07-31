@@ -1,15 +1,18 @@
+import ru from "./russia.png"
+import en from "./flag.png"
+
 
 export const languages = [
     {
         label: "Русский",
         key: "0",
         code: "ru",
-        // icon: <img src={RU} alt={"russ"}/>,
+        icon: ru,
     },
     {
         label: "English",
         key: "1",
         code: "en",
-        // icon: <img src={En} alt={"uz"}/>,
+        icon: en,
     },
 ];

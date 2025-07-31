@@ -4,13 +4,15 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import {useTranslation} from "react-i18next";
 
 const Contact = () => {
+    const {t} = useTranslation();
     return (
         <div className={"main_container"}>
             <div className="contact_top_box">
                 <div className="contact_top_box_title">
-                    <h1>Свяжитесь с нами — <br/>создадим качество вместе!</h1>
+                    <h1 dangerouslySetInnerHTML={{__html:t("contact.top_title")}}></h1>
                 </div>
                 <div className="contact_top_content">
                     <iframe
@@ -19,17 +21,15 @@ const Contact = () => {
                         referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div className="contact_top_element">
-                    <h1>Как нас найти</h1>
-                    <p>Наша фабрика находится по адресу, где рождается качество — приезжайте в удобное для вас
-                        время.</p>
+                    <h1>{t("contact.box_title")}</h1>
+                    <p>{t("contact.box_desc")}</p>
                     <div className="contact_top_element_box">
                         <div className="contact_top_element_item">
-                            <h2>Адрес</h2>
-                            <p>Республика Узбекистан, Ташкентская область, Куйчрчикский район, населённый пункт Беруний,
-                                ул. Файзобод, д.340</p>
+                            <h2>{t("contact.address_text")}</h2>
+                            <p>{t("contact.address")}</p>
                         </div>
                         <div className="contact_top_element_item">
-                            <h2>Телефон & Email</h2>
+                            <h2>{t("contact.tel_email")}</h2>
                             <a href={"tel:+998337004000"}>+998 33 700 40 00</a>
                             <a href={"mailto:fanditeks@hotmail.com"}>fanditeks@hotmail.com</a>
                         </div>
@@ -41,8 +41,8 @@ const Contact = () => {
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="contact_bottom_box_left">
-                            <h1>Вперёд к сотрудничеству</h1>
-                            <p>Мы готовы к новым идеям и партнёрствам. Давайте создадим что-то выдающееся вместе.</p>
+                            <h1>{t("contact.form_title")}</h1>
+                            <p>{t("contact.form_desc")}</p>
                             <a href={"tel:+998337004000"} className={"tell"}>+998 33 700 40 00</a>
                             <a href="mailto:fanditeks@hotmail.com" className={"email"}>fanditeks@hotmail.com</a>
                             <div className="contact_social">
@@ -55,18 +55,18 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-6">
                         <div className="contact_bottom_right">
-                            <h2>Контакты</h2>
+                            <h2>{t("contact.form_right_title")}</h2>
                             <div className="contact_form">
                                 <div className="input_box">
-                                    <input type="text" placeholder={"Имя"}/>
-                                    <input type="text" placeholder={"Email"}/>
+                                    <input type="text" placeholder={t("contact.name")}/>
+                                    <input type="email" placeholder={t("contact.email")}/>
                                 </div>
                                 <div className="input_box">
-                                    <input type="text" placeholder={"Телефон"}/>
-                                    <input type="text" placeholder={"Сообщение"}/>
+                                    <input type="tel" placeholder={t("contact.tel")}/>
+                                    <input type="text" placeholder={t("contact.msg")}/>
                                 </div>
 
-                                <button>Свяжитесь</button>
+                                <button>{t("contact.btn")}</button>
                             </div>
                         </div>
                     </div>
