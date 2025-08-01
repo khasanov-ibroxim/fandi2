@@ -20,7 +20,7 @@ const Home = () => {
                 <Home_s3/>
                 <Home_s4/>
                 <Home_s5/>
-                <Home_s6/>
+                {/*<Home_s6/>*/}
             </div>
         </>
 

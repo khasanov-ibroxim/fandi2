@@ -12,7 +12,7 @@ const About = () => {
             <About_s2/>
             <About_s3/>
             <div className="a3_box">
-                <Home_s6/>
+                {/*<Home_s6/>*/}
             </div>
         </div>
     );
